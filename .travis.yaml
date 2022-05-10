@@ -11,11 +11,16 @@ install:
 before_script:
   - echo "no tests"
 script:
-  - docker-compose -f Docker-compose-build.yaml build --parallel
-
+  - docker build -t udagram-api-feed ./udagram-api-feed
   - docker tag udagram-api-feed giabaohb48/udagram-api-feed:latest
+
+  - docker build -t udagram-api-user ./udagram-api-user
   - docker tag udagram-api-user giabaohb48/udagram-api-user:latest
+
+  - docker build -t udagram-frontend ./udagram-frontend
   - docker tag udagram-frontend giabaohb48/udagram-frontend:latest
+
+  - docker build -t udagram-reverseproxy ./udagram-reverseproxy
   - docker tag udagram-reverseproxy giabaohb48/udagram-reverseproxy:latest
 
 after_success:
