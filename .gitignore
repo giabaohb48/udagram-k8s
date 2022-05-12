@@ -1,4 +1,4 @@
 deploy/aws-secret.yaml
 deploy/env-configmap.yaml
 deploy/env-secret.yaml
-.env
+node_modules
