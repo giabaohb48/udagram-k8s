@@ -9,14 +9,15 @@ pipeline {
                     docker version
                     docker-compose version
                     curl --version
-                    pwd
+                    
                 '''
             }
         }
 
         stage("Build") {
             steps {
-                sh "docker-compose -f Docker-compose-build.yml build"
+                pwd
+                sh "docker-compose -f ./Docker-compose-build.yml build"
             }
         }
     }
