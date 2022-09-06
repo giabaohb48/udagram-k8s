@@ -1,11 +1,12 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+export const external_ip = process.env.EXTERNAL_IP
 export const environment = {
   production: false,
   appName: 'Udagram',
-  apiHost: 'http://a1db60444b96e4dd58398ba2b9032982-2034613595.ap-southeast-1.elb.amazonaws.com:8080/api/v0'
+  // apiHost: 'http://a1db60444b96e4dd58398ba2b9032982-2034613595.ap-southeast-1.elb.amazonaws.com:8080/api/v0'
+  apiHost: external_ip + ':8080/api/v0'
 };
 
 /*
