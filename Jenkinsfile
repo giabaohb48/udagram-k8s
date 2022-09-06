@@ -9,6 +9,7 @@ pipeline {
                     docker version
                     docker-compose version
                     curl --version
+                    pwd
                 '''
             }
         }
@@ -19,6 +20,5 @@ pipeline {
             }
         }
     }
-
     
 }
