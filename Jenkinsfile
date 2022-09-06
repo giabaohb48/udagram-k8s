@@ -14,7 +14,6 @@ pipeline {
         }
 
         stage("Build") {
-            agent { node {label 'master'}}
             steps {
                 sh "docker-compose -f Docker-compose-build.yml build"
             }
